@@ -7,15 +7,7 @@
 <body>
 <h1>Bookmarks</h1>
 <?
-$c=mysql_connect('localhost','web','password');
-if(!$c){
-    die(mysql_error());
-}
-$d=mysql_select_db('bookmarks_webapp',$c);
-if(!$d){
-    die(mysql_error());
-}
-mysql_set_charset('utf8');
+require("init_db.php");
 $r=mysql_query('SELECT url,title FROM bookmarks');
 if(!$r){
     die(mysql_error());
@@ -25,7 +17,7 @@ while($i=mysql_fetch_assoc($r)){
     $t=$i['title'];
     print('<a href="'.$u.'">'.$t."</a><br />\n");
 }
-mysql_close($c);
+require("term_db.php");
 ?>
 <hr />
 <a href="./addbookmark.html">Add bookmark</a><br />

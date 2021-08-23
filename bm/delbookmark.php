@@ -7,15 +7,7 @@
 <body>
 <h1>Delete bookmark</h1>
 <?
-$c=mysql_connect('localhost','web','password');
-if(!$c){
-    die(mysql_error());
-}
-$d=mysql_select_db('bookmarks_webapp',$c);
-if(!$d){
-    die(mysql_error());
-}
-mysql_set_charset('utf8');
+require("init_db.php");
 $r=mysql_query('SELECT id,title FROM bookmarks');
 if(!$r){
     die(mysql_error());
@@ -25,7 +17,7 @@ while($j=mysql_fetch_assoc($r)){
     $t=$j['title'];
     print('<a href="./delbookmark_proc.php?id='.$i.'">Delete ['.$t."]</a><br />\n");
 }
-mysql_close($c);
+require("term_db.php");
 ?>
 </body>
 </html>
