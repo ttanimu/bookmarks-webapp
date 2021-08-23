@@ -10,9 +10,9 @@
 $i=$_GET['id'];
 require("init_db.php");
 $s="DELETE FROM bookmarks WHERE id=".$i.";";
-$r=mysql_query($s);
+$r=mysqli_query($d,$s);
 if(!$r){
-    die(mysql_error());
+    die(mysqli_error());
 }
 print($i." OK\n");
 require("term_db.php");

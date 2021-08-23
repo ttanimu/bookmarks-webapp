@@ -11,9 +11,9 @@ $t=$_POST['title'];
 $u=$_POST['url'];
 require("init_db.php");
 $s="INSERT INTO bookmarks(url,title) VALUES ('".$u."','".$t."');";
-$r=mysql_query($s);
+$r=mysqli_query($d,$s);
 if(!$r){
-    die(mysql_error());
+    die(mysqli_error());
 }
 print("OK\n");
 require("term_db.php");

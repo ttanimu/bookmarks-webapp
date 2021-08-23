@@ -8,11 +8,11 @@
 <h1>Bookmarks</h1>
 <?
 require("init_db.php");
-$r=mysql_query('SELECT url,title FROM bookmarks');
+$r=mysqli_query($d,'SELECT url,title FROM bookmarks');
 if(!$r){
-    die(mysql_error());
+    die(mysqli_error($d));
 }
-while($i=mysql_fetch_assoc($r)){
+while($i=mysqli_fetch_assoc($r)){
     $u=$i['url'];
     $t=$i['title'];
     print('<a href="'.$u.'">'.$t."</a><br />\n");
