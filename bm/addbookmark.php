@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Added bookmark</h1>
-<?
+<?php
 $t=$_POST['title'];
 $u=$_POST['url'];
 require("init_db.php");

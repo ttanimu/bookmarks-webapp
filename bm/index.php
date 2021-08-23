@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Bookmarks</h1>
-<?
+<?php
 require("init_db.php");
 $r=mysqli_query($d,'SELECT url,title FROM bookmarks');
 if(!$r){

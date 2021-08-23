@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Deleted bookmark</h1>
-<?
+<?php
 $i=$_GET['id'];
 require("init_db.php");
 $s="DELETE FROM bookmarks WHERE id=".$i.";";

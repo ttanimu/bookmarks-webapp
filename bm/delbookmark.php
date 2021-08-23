@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Delete bookmark</h1>
-<?
+<?php
 require("init_db.php");
 $r=mysqli_query($d,'SELECT id,title FROM bookmarks');
 if(!$r){
