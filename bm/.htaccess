@@ -1,0 +1,18 @@
+AuthType Basic
+AuthName "ttanimu bookmarks"
+AuthBasicAuthoritative off
+AuthUserFile /dev/null
+AuthMYSQL on
+AuthMySQL_Authoritative off
+AuthMySQL_Host localhost
+AuthMySQL_User web
+AuthMySQL_Password password
+AuthMySQL_DB bookmarks_webapp
+AuthMySQL_Password_Table users
+AuthMySQL_Username_Field name
+AuthMySQL_Password_Field password
+AuthMySQL_Empty_Passwords off
+AuthMySQL_Encryption_Types SHA1Sum
+Order allow,deny
+Allow from all
+Require valid-user
