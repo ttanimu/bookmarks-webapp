@@ -1,20 +1,21 @@
 <!doctype html>
+<?php require("resources.php"); ?>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>bookmarks</title>
+<title><?php echo $R_TITLE; ?></title>
 </head>
 <body>
-<h1>Deleted bookmark</h1>
+<h1><?php echo $R_DEL_BM; ?></h1>
 <?php
 $i=$_GET['id'];
 require("init_db.php");
 $s="DELETE FROM bookmarks WHERE id=".$i.";";
 $r=mysqli_query($d,$s);
 if(!$r){
-    die(mysqli_error());
+    die($R_FAILED);
 }
-print($i." OK\n");
+echo $R_DELETED;
 require("term_db.php");
 ?>
 </body>

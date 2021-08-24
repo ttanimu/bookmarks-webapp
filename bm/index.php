@@ -1,11 +1,12 @@
 <!doctype html>
+<?php require("resources.php"); ?>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>bookmarks</title>
+<title><?php echo $R_TITLE; ?></title>
 </head>
 <body>
-<h1>Bookmarks</h1>
+<h1><?php echo $R_TITLE; ?></h1>
 <?php
 require("init_db.php");
 $r=mysqli_query($d,'SELECT url,title FROM bookmarks');
@@ -20,7 +21,7 @@ while($i=mysqli_fetch_assoc($r)){
 require("term_db.php");
 ?>
 <hr />
-<a href="./addbookmark.html">Add bookmark</a><br />
-<a href="./delbookmark.php">Delete bookmark</a><br />
+<a href="./addbookmark_set.php"><?php echo $R_ADD_BM; ?></a><br />
+<a href="./delbookmark.php"><?php echo $R_DEL_BM; ?></a><br />
 </body>
 </html>

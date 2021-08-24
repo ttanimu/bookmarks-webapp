@@ -1,11 +1,12 @@
 <!doctype html>
+<?php require("resources.php"); ?>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>bookmarks</title>
+<title><?php echo $R_TITLE; ?></title>
 </head>
 <body>
-<h1>Added bookmark</h1>
+<h1><?php echo $R_ADD_BM; ?></h1>
 <?php
 $t=$_POST['title'];
 $u=$_POST['url'];
@@ -13,9 +14,9 @@ require("init_db.php");
 $s="INSERT INTO bookmarks(url,title) VALUES ('".$u."','".$t."');";
 $r=mysqli_query($d,$s);
 if(!$r){
-    die(mysqli_error());
+    die($R_FAILED);
 }
-print("OK\n");
+echo $R_ADDED;
 require("term_db.php");
 ?>
 </body>
