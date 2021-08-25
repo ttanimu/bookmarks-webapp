@@ -10,8 +10,9 @@
 <?php
 $t=$_POST['title'];
 $u=$_POST['url'];
+$l=$_POST['labels'];
 require("init_db.php");
-$s="INSERT INTO bookmarks(url,title,user) VALUES ('".$u."','".$t."','".$ui."');";
+$s="INSERT INTO bookmarks(user,url,title,labels) VALUES ('".$ui."','".$u."','".$t."','".$l."');";
 $r=mysqli_query($d,$s);
 if(!$r){
     die($R_FAILED);

@@ -16,6 +16,10 @@
         <label for="url"><?php echo $R_BM_URL; ?></label>
         <input type="text" id="url" name="url" />
     </div>
+    <div>
+        <label for="labels"><?php echo $R_BM_LABELS; ?></label>
+        <input type="text" id="labels" name="labels" />
+    </div>
     <input type="submit" value="<?php echo $R_ADD; ?>" />
 </form>
 </body>

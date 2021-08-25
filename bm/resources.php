@@ -11,6 +11,10 @@ if(strstr($lg,"ja")){ /* Japanese */
     $R_ADD='追加';
     $R_ADDED='追加しました';
     $R_FAILED='失敗しました';
+    $R_BM_LABELS='ラベル(複数入力時は空白で分ける)';
+    $R_SEARCH_LABEL='検索するラベル';
+    $R_SEARCH='検索';
+    $R_LABELS='ラベル一覧';
 } else { /* english */
     $R_TITLE='ttanimu Bookmarks';
     $R_ADD_BM='Add bookmark';
@@ -22,5 +26,9 @@ if(strstr($lg,"ja")){ /* Japanese */
     $R_ADD='Add';
     $R_ADDED='Added';
     $R_FAILED='Failed';
+    $R_BM_LABELS='labels(separater is space)';
+    $R_SEARCH_LABEL='label for search';
+    $R_SEARCH='Search';
+    $R_LABELS='label list';
 }
 ?>
