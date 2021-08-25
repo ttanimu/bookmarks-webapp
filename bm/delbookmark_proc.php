@@ -10,7 +10,7 @@
 <?php
 $i=$_GET['id'];
 require("init_db.php");
-$s="DELETE FROM bookmarks WHERE id=".$i.";";
+$s="DELETE FROM bookmarks WHERE id=".$i." AND user=".$ui.";";
 $r=mysqli_query($d,$s);
 if(!$r){
     die($R_FAILED);

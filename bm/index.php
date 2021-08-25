@@ -9,7 +9,7 @@
 <h1><?php echo $R_TITLE; ?></h1>
 <?php
 require("init_db.php");
-$r=mysqli_query($d,'SELECT url,title FROM bookmarks');
+$r=mysqli_query($d,'SELECT url,title FROM bookmarks WHERE user='.$ui.';');
 if(!$r){
     die(mysqli_error($d));
 }

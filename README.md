@@ -20,11 +20,11 @@ You must install and set up them by the following commands (This is for Ubuntu 1
 And you must modify apache2's configuration files to use ".htaccess".
 Typically you must change "AllowOverride None" to "AllowOverride All" in the following lines in "/etc/apache2/apache2.conf".
 <pre>
-<Directory />
+&lt;Directory /&gt;
         Options FollowSymLinks
         AllowOverride None
         Require all denied
-</Directory>
+&lt;/Directory&gt;
 </pre>
 
 ## Preparation of Database
@@ -49,11 +49,11 @@ mysql> show variables like "chara%";
 mysql> CREATE TABLE users (id INT AUTO_INCREMENT, name TEXT,password TEXT, PRIMARY KEY (id));
 mysql> INSERT INTO users(name,password) VALUES ('ttanimu','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
 mysql> INSERT INTO users(name,password) VALUES ('test','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
-mysql> CREATE TABLE bookmarks (id INT AUTO_INCREMENT, url TEXT,title TEXT, PRIMARY KEY (id));
+mysql> CREATE TABLE bookmarks (id INT AUTO_INCREMENT, url TEXT,title TEXT, user INT, PRIMARY KEY (id), CONSTRAINT fk_user FOREIGN KEY (user) REFERENCES users (id) ON DELETE SET NULL ON UPDATE CASCADE);
 mysql> alter table bookmarks convert to character set utf8;
 mysql> show create table bookmarks \G
 mysql> DESCRIBE bookmarks;
-mysql> INSERT INTO bookmarks(url,title) VALUES ('https://www.google.com','Goolge');
+mysql> INSERT INTO bookmarks(url,title,user) VALUES ('https://www.google.com','Goolge',1);
 mysql> SELECT * FROM bookmarks;
 mysql> \q
 </pre>
