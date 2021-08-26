@@ -43,5 +43,7 @@ require("term_db.php");
 <a href="./addbookmark_set.php"><?php echo $R_ADD_BM; ?></a><br />
 <a href="./editbookmark.php"><?php echo $R_EDIT_BM; ?></a><br />
 <a href="./delbookmark.php"><?php echo $R_DEL_BM; ?></a><br />
+<a href="./export_csv.php"><?php echo $R_EXPCSV_BM; ?></a><br />
+<a href="./export_html.php"><?php echo $R_EXPHTML_BM; ?></a><br />
 </body>
 </html>

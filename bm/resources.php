@@ -19,6 +19,8 @@ if(strstr($lg,"ja")){ /* Japanese */
     $R_EDIT_BM='ブックマークの編集';
     $R_EDIT='編集';
     $R_EDITED='編集しました';
+    $R_EXPCSV_BM='ブックマークをCSVで出力';
+    $R_EXPHTML_BM='ブックマークをHTMLで出力';
 } else { /* english */
     $R_TITLE='ttanimu Bookmarks';
     $R_ADD_BM='Add bookmark';
@@ -38,5 +40,7 @@ if(strstr($lg,"ja")){ /* Japanese */
     $R_EDIT_BM='Edit bookmark';
     $R_EDIT='Edit';
     $R_EDITED='Edited';
+    $R_EXPCSV_BM='Export bookmarks to CSV';
+    $R_EXPHTML_BM='Export bookmarks to HTML';
 }
 ?>
