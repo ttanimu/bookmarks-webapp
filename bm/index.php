@@ -41,6 +41,7 @@ require("term_db.php");
 ?>
 <hr />
 <a href="./addbookmark_set.php"><?php echo $R_ADD_BM; ?></a><br />
+<a href="./editbookmark.php"><?php echo $R_EDIT_BM; ?></a><br />
 <a href="./delbookmark.php"><?php echo $R_DEL_BM; ?></a><br />
 </body>
 </html>
