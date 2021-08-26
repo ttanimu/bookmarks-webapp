@@ -11,8 +11,9 @@
 $t=$_POST['title'];
 $u=$_POST['url'];
 $l=$_POST['labels'];
+$c=$_POST['comment'];
 require("init_db.php");
-$s="INSERT INTO bookmarks(user,url,title,labels) VALUES ('".$ui."','".$u."','".$t."','".$l."');";
+$s="INSERT INTO bookmarks(user,url,title,labels,reg_date,comment) VALUES ('".$ui."','".$u."','".$t."','".$l."',cast( now() as date),'".$c."');";
 $r=mysqli_query($d,$s);
 if(!$r){
     die($R_FAILED);

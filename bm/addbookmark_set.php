@@ -20,6 +20,10 @@
         <label for="labels"><?php echo $R_BM_LABELS; ?></label>
         <input type="text" id="labels" name="labels" />
     </div>
+    <div>
+        <label for="comment"><?php echo $R_BM_COMMENT; ?></label>
+        <input type="text" id="comment" name="comment" />
+    </div>
     <input type="submit" value="<?php echo $R_ADD; ?>" />
 </form>
 </body>

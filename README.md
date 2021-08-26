@@ -49,7 +49,7 @@ mysql> show variables like "chara%";
 mysql> CREATE TABLE users (id INT AUTO_INCREMENT, name TEXT,password TEXT, PRIMARY KEY (id));
 mysql> INSERT INTO users(name,password) VALUES ('ttanimu','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
 mysql> INSERT INTO users(name,password) VALUES ('test','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
-mysql> CREATE TABLE bookmarks (id INT AUTO_INCREMENT,user INT,url TEXT,title TEXT,labels TEXT,PRIMARY KEY (id),CONSTRAINT fk_user FOREIGN KEY (user) REFERENCES users (id) ON DELETE SET NULL ON UPDATE CASCADE);
+mysql> CREATE TABLE bookmarks (id INT AUTO_INCREMENT,user INT,url TEXT,title TEXT,labels TEXT,reg_date DATE,comment TEXT,PRIMARY KEY (id),CONSTRAINT fk_user FOREIGN KEY (user) REFERENCES users (id) ON DELETE SET NULL ON UPDATE CASCADE);
 mysql> alter table bookmarks convert to character set utf8;
 mysql> show create table bookmarks \G
 mysql> DESCRIBE bookmarks;
